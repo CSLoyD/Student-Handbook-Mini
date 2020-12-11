@@ -21,9 +21,19 @@ class Login : AppCompatActivity() {
         val LoggingIn: LoggingIn = LoggingIn(this)
         val btnLogin = findViewById<Button>(R.id.btnLogin)
         val lUsername = findViewById<TextView>(R.id.loginUsername).text.toString()
+
+        fun checkSession() {
+            if (LoggingIn.getUserType("userType") == "student") {
+                val logIntent = Intent(this@Login, StudentDashboard::class.java)
+                startActivity(logIntent)
+                finish()
+            }
+        }
+
         @Override
         fun onStart() {
             super.onStart()
+            checkSession()
         }
         onStart()
 
@@ -72,22 +82,30 @@ class Login : AppCompatActivity() {
                                     if (putData.startPut()) {
                                         if (putData.onComplete()) {
                                             val userType = putData.result
+
+                                            LoggingIn.saveUsername("lUsername", lUsername)
+                                            LoggingIn.saveUserType("userType", userType)
+                                            LoggingIn.saveLogin("isLogin", true)
+
+                                            Toast.makeText(applicationContext, suc, Toast.LENGTH_SHORT).show()
+                                            val mainIntent = Intent(this, StudentDashboard::class.java)
+                                            startActivity(mainIntent)
+                                            finish()
                                         }
                                     }
                                 }
+
                             } else {
-                                Toast.makeText(applicationContext, result, Toast.LENGTH_SHORT)
-                                    .show()
+                                Toast.makeText(applicationContext, result, Toast.LENGTH_SHORT).show()
                             }
 
                         }
                     }
                 })
             } else {
-                Toast.makeText(
-                    applicationContext, "Please fill out all fields!", Toast.LENGTH_SHORT
-                ).show()
+                Toast.makeText(applicationContext, "Please fill out all fields!", Toast.LENGTH_SHORT).show()
             }
         }
+
     }
 }
