@@ -1,3 +1,43 @@
 <resources>
-    <string name="app_name">FinalStudentHandbook</string>
+    <string name="app_name">SSCT Student Handbook</string>
+    <string name="SSCT_tittle">SSCT Student Handbook</string>
+    <string name="ssct_student_handbook">SSCT Student Handbook</string>
+    <string name="login">Login</string>
+    <string name="login_button">login</string>
+    <string name="password">Password</string>
+    <string name="username">Username</string>
+    <string name="register_title">Registration Form</string>
+    <string name="registration_form">Registration Form</string>
+    <string name="rLastName">Last Name</string>
+    <string name="rFirstName">First Name</string>
+    <string name="rUserPass">Password</string>
+    <string name="rCourse">Course</string>
+    <string name="rYearSec"><![CDATA[Year & Section]]></string>
+    <string name="rSchoolID">School ID</string>
+    <string name="rGender">Gender</string>
+    <string name="rUserName">Username</string>
+    <string name="btnRegister">Register</string>
+    <string name="rProgress" />
+    <string name="lProgress" />
+    <string name="sign_in">Sign In</string>
+    <string name="already_have_an_account">Already have an Account?</string>
+    <string name="SSCTHandBook">SSCT HandBook</string>
+    <string name="Logout">Button</string>
+    <string name="todo" />
+    <string name="sign_up"></string>
+    <string name="login_into_your_account">Login into your account</string>
+    <string name="create_your_account">Create your account</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="studNavOpen"></string>
+    <string name="studNavClose"></string>
+    <string name="adminNavOpen"></string>
+    <string name="adminNavClose"></string>
+    <string name="logout"></string>
+    <string name="admin">Admin</string>
+    <string name="student_profile">Student Profile</string>
+    <string name="school_id">school ID</string>
+    <string name="year_and_section">Year and Section</string>
+    <string name="course">Course</string>
+    <string name="gender">Gender</string>
 </resources>

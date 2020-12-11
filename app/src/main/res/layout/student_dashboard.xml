@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:padding="20dp"
+    tools:context=".adminHandbookFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="40dp"
+        android:fillViewport="true"
+        android:background="@drawable/background"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:id="@+id/relativelayout"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+                android:id="@+id/adHMtitle"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="0dp"
+                android:text="Student Handbook"
+                android:fontFamily="@font/fredokaone_regular"
+                android:textAlignment="center"
+                android:textColor="#fff"
+                android:textSize="35sp" />
+
+            <LinearLayout
+                android:id="@+id/btnlayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="60dp"
+                android:layout_below="@id/adHMtitle"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/button5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rounded_button"
+                    android:layout_weight="1"
+                    android:layout_margin="5dp"
+                    android:textColor="#fff"
+                    android:text="My Profile" />
+
+                <Button
+                    android:id="@+id/button6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#fff"
+                    android:background="@drawable/rounded_button"
+                    android:layout_weight="1"
+                    android:layout_margin="5dp"
+                    android:text="Logout" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentStart="true"
+                android:layout_below="@id/btnlayout"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="140dp"
+                android:orientation="vertical">
+
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+
+
+
+
+
+    </ScrollView>
+
+</FrameLayout>
