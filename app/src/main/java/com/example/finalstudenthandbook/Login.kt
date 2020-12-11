@@ -23,8 +23,8 @@ class Login : AppCompatActivity() {
         val lUsername = findViewById<TextView>(R.id.loginUsername).text.toString()
 
         fun checkSession() {
-            if (LoggingIn.getUserType("userType") == "student") {
-                val logIntent = Intent(this@Login, StudentDashboard::class.java)
+            if(LoggingIn.getUserType("userType") == "student"){
+                val logIntent = Intent(this, StudentDashboard::class.java)
                 startActivity(logIntent)
                 finish()
             }
@@ -107,5 +107,11 @@ class Login : AppCompatActivity() {
             }
         }
 
+    }
+
+    fun goToRegister(view: View) {
+        val mainIntent = Intent(this, Registration::class.java)
+        startActivity(mainIntent)
+        finish()
     }
 }

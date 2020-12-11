@@ -43,7 +43,7 @@
                 android:layout_marginTop="-161dp"
                 android:layout_marginEnd="160dp"
                 android:hint="@string/lProgress"
-                android:visibility="visible" />
+                android:visibility="gone" />
 
             <TextView
                 android:layout_width="wrap_content"

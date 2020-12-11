@@ -7,14 +7,13 @@ import android.os.Looper
 import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.github.barteksc.pdfviewer.PDFView
 import com.vishnusivadas.advanced_httpurlconnection.PutData
 import kotlinx.android.synthetic.main.activity_registration.*
 
 class Registration : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.student_dashboard)
+        setContentView(R.layout.activity_registration)
 
         btnRegister.setOnClickListener{
 
@@ -58,6 +57,12 @@ class Registration : AppCompatActivity() {
                 Toast.makeText(applicationContext, "Please fill out all fields!", Toast.LENGTH_SHORT).show()
             }
         }
+    }
+
+    fun goToLogin(view: View) {
+        val mainIntent = Intent(this, Login::class.java)
+        startActivity(mainIntent)
+        finish()
     }
 
 

@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/background"
     android:padding="20dp"
-    tools:context=".adminHandbookFragment">
+    tools:context=".StudentDashboard">
 
     <!-- TODO: Update blank fragment layout -->
 
@@ -86,8 +86,6 @@
                     android:layout_alignParentBottom="true"
                     android:layout_marginTop="0dp"
                     android:layout_marginBottom="0dp" />
-
-
             </LinearLayout>
 
 
