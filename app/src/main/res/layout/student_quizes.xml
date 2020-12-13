@@ -28,8 +28,8 @@
             android:layout_alignParentTop="true"
             android:layout_marginStart="20dp"
             android:layout_marginTop="5dp"
-            android:background="transparent"
-            app:srcCompat="@drawable/ic_round_arrow_back_ios_24" />
+            app:srcCompat="@drawable/ic_round_arrow_back_ios_24"
+            android:onClick="gotoMain"/>
 
         <TextView
             android:id="@+id/txtPageTitle"
@@ -67,7 +67,7 @@
                     android:id="@+id/question1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="1. What should serve as basis for enrolment for the succeeding term?"
+                    android:text="1. What should serve as basis for enrollment for the succeeding term?"
                     android:textColor="#fff"
                     android:textSize="18dp" />
 
@@ -83,7 +83,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:buttonTint="#E6E6E6"
-                        android:text="certificate of registration"
+                        android:text="Certificate of Registration"
                         android:textColor="#fff"
                         android:textSize="18dp" />
 
@@ -92,7 +92,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:buttonTint="#E6E6E6"
-                        android:text="admission slip"
+                        android:text="Admission Slip"
                         android:textColor="#fff"
                         android:textSize="18dp" />
 
@@ -101,7 +101,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:buttonTint="#E6E6E6"
-                        android:text="student clearance"
+                        android:text="Student Clearance"
                         android:textColor="#fff"
                         android:textSize="18dp" />
 
@@ -110,7 +110,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:buttonTint="#E6E6E6"
-                        android:text="examination slip"
+                        android:text="Examination Slip"
                         android:textColor="#fff"
                         android:textSize="18dp" />
                 </RadioGroup>
@@ -212,7 +212,7 @@ meritorious cases. Which of the following is not one of those cases?"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:buttonTint="#E6E6E6"
-                        android:text="To get a higher grade."
+                        android:text="To get a higher grade"
                         android:textColor="#fff"
                         android:textSize="18dp" />
 
@@ -577,9 +577,9 @@ meritorious cases. Which of the following is not one of those cases?"
 
 
                 <Button
-                    android:id="@+id/btnSubmit"
-                    android:hint="@string/btnRegister"
-                    android:text="@string/btnRegister"
+                    android:id="@+id/btnQuiz"
+                    android:hint="@string/btnQuiz"
+                    android:text="Submit Answer"
                     android:layout_below="@+id/btnRadio10"
                     android:layout_width="340dp"
                     android:layout_height="wrap_content"

@@ -48,8 +48,8 @@
                     android:layout_margin="5dp"
                     android:textColor="#fff"
                     android:textSize="13dp"
-
-                    android:text="My Profile" />
+                    android:onClick="std_updateprof"
+                    android:text="Update Profile" />
 
                 <Button
                     android:id="@+id/button6"
@@ -58,23 +58,11 @@
                     android:layout_margin="5dp"
                     android:layout_weight="1"
                     android:background="@drawable/rounded_button"
-                    android:onClick="std_Logout"
+                    android:onClick="std_Quiz"
                     android:textSize="13dp"
                     android:text="Quiz"
                     android:textColor="#fff" />
 
-                <Button
-                    android:id="@+id/btnVscore"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="5dp"
-                    android:layout_weight="1"
-                    android:textSize="13dp"
-
-                    android:background="@drawable/rounded_button"
-                    android:onClick="std_Logout"
-                    android:text="View Score"
-                    android:textColor="#fff" />
                 <Button
                     android:id="@+id/btnLogout"
                     android:layout_width="wrap_content"
@@ -84,7 +72,6 @@
                     android:layout_weight="1"
                     android:layout_margin="5dp"
                     android:textSize="13dp"
-
                     android:onClick="std_Logout"
                     android:text="Logout" />
 

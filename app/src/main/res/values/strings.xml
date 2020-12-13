@@ -40,4 +40,5 @@
     <string name="year_and_section">Year and Section</string>
     <string name="course">Course</string>
     <string name="gender">Gender</string>
+    <string name="btnQuiz" />
 </resources>

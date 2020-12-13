@@ -28,8 +28,8 @@
             android:layout_alignParentTop="true"
             android:layout_marginStart="20dp"
             android:layout_marginTop="5dp"
-            android:background="transparent"
-            app:srcCompat="@drawable/ic_round_arrow_back_ios_24" />
+            app:srcCompat="@drawable/ic_round_arrow_back_ios_24"
+            android:onClick="backMain"/>
 
         <TextView
             android:id="@+id/txtPageTitle"

@@ -26,6 +26,16 @@ class StudentDashboard : AppCompatActivity() {
         finish()
     }
 
+    fun std_updateprof(view: View) {
+        val mainIntent = Intent(this, UpdateProfile::class.java)
+        startActivity(mainIntent)
+        finish()
+    }
+    fun std_Quiz(view: View) {
+        val mainIntent = Intent(this, Quizzes::class.java)
+        startActivity(mainIntent)
+        finish()
+    }
 
 
 }

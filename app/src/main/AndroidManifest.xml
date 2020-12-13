@@ -3,6 +3,7 @@
     package="com.example.finalstudenthandbook">
 
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -11,17 +12,20 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity"></activity>
-        <activity android:name=".Login">
+        <activity android:name=".Login" android:screenOrientation="locked" android:theme="@style/Theme.AppCompat.DayNight.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Registration"></activity>
-        <activity android:name=".StudentDashboard"></activity>
+        <activity android:name=".Registration" android:screenOrientation="locked" android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"></activity>
+        <activity android:name=".StudentDashboard" android:screenOrientation="locked" android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"></activity>
+        <activity android:name=".Quizzes" android:screenOrientation="locked" android:theme="@style/Theme.AppCompat.DayNight.NoActionBar">
+        </activity>
+        <activity android:name=".UpdateProfile" android:screenOrientation="locked" android:theme="@style/Theme.AppCompat.DayNight.NoActionBar">
 
+        </activity>
     </application>
 
 </manifest>
