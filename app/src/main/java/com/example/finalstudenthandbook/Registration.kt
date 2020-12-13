@@ -15,7 +15,7 @@ class Registration : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_registration)
 
-        btnRegister.setOnClickListener{
+        btnSubmit.setOnClickListener{
 
             if( rUserName.text.trim().isNotEmpty() && rUserPass.text.trim().isNotEmpty() ) {
                 rProgress.visibility = View.VISIBLE
