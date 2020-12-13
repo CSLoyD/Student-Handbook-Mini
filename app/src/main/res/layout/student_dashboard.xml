@@ -8,14 +8,7 @@
 
     <!-- TODO: Update blank fragment layout -->
 
-    <ScrollView
-        android:id="@+id/scrollView"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="40dp"
-        android:fillViewport="true"
-        android:background="@drawable/background"
-        android:scrollbars="none">
+
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -33,6 +26,7 @@
                 android:fontFamily="@font/fredokaone_regular"
                 android:textAlignment="center"
                 android:textColor="#fff"
+
                 android:textSize="35sp" />
 
             <LinearLayout
@@ -46,35 +40,71 @@
                 android:orientation="horizontal">
 
                 <Button
-                    android:id="@+id/button5"
+                    android:id="@+id/btnMyprof"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@drawable/rounded_button"
                     android:layout_weight="1"
                     android:layout_margin="5dp"
                     android:textColor="#fff"
+                    android:textSize="13dp"
+
                     android:text="My Profile" />
 
                 <Button
                     android:id="@+id/button6"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/rounded_button"
+                    android:onClick="std_Logout"
+                    android:textSize="13dp"
+                    android:text="Quiz"
+                    android:textColor="#fff" />
+
+                <Button
+                    android:id="@+id/btnVscore"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:textSize="13dp"
+
+                    android:background="@drawable/rounded_button"
+                    android:onClick="std_Logout"
+                    android:text="View Score"
+                    android:textColor="#fff" />
+                <Button
+                    android:id="@+id/btnLogout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:textColor="#fff"
                     android:background="@drawable/rounded_button"
                     android:layout_weight="1"
                     android:layout_margin="5dp"
+                    android:textSize="13dp"
+
                     android:onClick="std_Logout"
                     android:text="Logout" />
 
-            </LinearLayout>
 
+            </LinearLayout>
+            <ScrollView
+                android:id="@+id/scrollView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fillViewport="true"
+                android:layout_marginTop="140dp"
+                android:background="@drawable/background"
+                android:scrollbars="none">
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_alignParentStart="true"
                 android:layout_below="@id/btnlayout"
                 android:layout_alignParentTop="true"
-                android:layout_marginTop="140dp"
+
                 android:orientation="vertical">
 
                <com.github.barteksc.pdfviewer.PDFView
@@ -89,14 +119,7 @@
 
             </LinearLayout>
 
-
-        </RelativeLayout>
-
-
-
-
-
-
     </ScrollView>
+        </RelativeLayout>
 
 </FrameLayout>

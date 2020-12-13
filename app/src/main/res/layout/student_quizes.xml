@@ -1,0 +1,822 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    >
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <LinearLayout
+        android:id="@+id/topContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fff"
+        android:orientation="horizontal"
+        android:paddingTop="90dp"
+        android:paddingBottom="90dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/txtPageTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/fredokaone_regular"
+            android:gravity="center"
+            android:text="Student Quizzes"
+            android:textColor="#333333"
+            android:textSize="45sp" />
+
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="235dp"
+        >
+        <ScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:fillViewport="true"
+            android:scrollbars="none">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="20dp">
+
+                <TextView
+                    android:id="@+id/question1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1. What should serve as basis for enrolment for the succeeding term?"
+                    android:textColor="#fff"
+                    android:textSize="18dp" />
+
+                <RadioGroup
+                    android:id="@+id/btnRadio1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/question1"
+                    android:layout_marginTop="8dp">
+
+                    <RadioButton
+                        android:id="@+id/radia_id1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="#E6E6E6"
+                        android:text="certificate of registration"
+                        android:textColor="#fff"
+                        android:textSize="18dp" />
+
+                    <RadioButton
+                        android:id="@+id/radia_id2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="#E6E6E6"
+                        android:text="admission slip"
+                        android:textColor="#fff"
+                        android:textSize="18dp" />
+
+                    <RadioButton
+                        android:id="@+id/radia_id3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="#E6E6E6"
+                        android:text="student clearance"
+                        android:textColor="#fff"
+                        android:textSize="18dp" />
+
+                    <RadioButton
+                        android:id="@+id/radia_id4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="#E6E6E6"
+                        android:text="examination slip"
+                        android:textColor="#fff"
+                        android:textSize="18dp" />
+                </RadioGroup>
+
+                <TextView
+                    android:id="@+id/question2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/btnRadio1"
+                    android:layout_marginTop="20dp"
+                    android:text="2. What is the maximum units for summer load?"
+                    android:textColor="#fff"
+                    android:textSize="18dp" />
+
+                <RadioGroup
+                    android:id="@+id/btnRadio2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/question2"
+                    android:layout_marginTop="8dp">
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="#E6E6E6"
+                        android:text="5"
+                        android:textColor="#fff"
+                        android:textSize="18dp" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="#E6E6E6"
+                        android:text="12"
+                        android:textColor="#fff"
+                        android:textSize="18dp" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="#E6E6E6"
+                        android:text="9"
+                        android:textColor="#fff"
+                        android:textSize="18dp" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="#E6E6E6"
+                        android:text="7"
+                        android:textColor="#fff"
+                        android:textSize="18dp" />
+
+                </RadioGroup>
+
+                <TextView
+                    android:id="@+id/question3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/btnRadio2"
+                    android:layout_marginTop="20dp"
+                    android:text="3. Students may be allowed to enroll in another school only in
+meritorious cases. Which of the following is not one of those cases?"
+                    android:textColor="#fff"
+                    android:textSize="18dp" />
+
+                <RadioGroup
+                    android:id="@+id/btnRadio3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/question3"
+                    android:layout_marginTop="8dp">
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="#E6E6E6"
+                        android:text="To make up for his/her deficiencies"
+                        android:textColor="#fff"
+                        android:textSize="18dp" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="#E6E6E6"
+                        android:text="The subjects are minor subjects and are not offered during the particular term"
+                        android:textColor="#fff"
+                        android:textSize="18dp" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="#E6E6E6"
+                        android:text="The subject is offered but their schedule is in conflict with the other subjects enrolled in. "
+                        android:textColor="#fff"
+                        android:textSize="18dp" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="#E6E6E6"
+                        android:text="To get a higher grade."
+                        android:textColor="#fff"
+                        android:textSize="18dp" />
+
+                </RadioGroup>
+
+                <TextView
+                    android:id="@+id/question4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/btnRadio3"
+                    android:layout_marginTop="20dp"
+                    android:text="4. DRP stands for"
+                    android:textColor="#fff"
+                    android:textSize="18dp" />
+
+                <RadioGroup
+                    android:id="@+id/btnRadio4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/question4"
+                    android:layout_marginTop="8dp" >
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="#E6E6E6"
+                        android:text="a. officially dropped"
+                        android:textColor="#fff"
+                        android:textSize="18dp" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="#E6E6E6"
+                        android:text="b. damage restriction plan"
+                        android:textColor="#fff"
+                        android:textSize="18dp" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="#E6E6E6"
+                        android:text="c. detailed rating point"
+                        android:textColor="#fff"
+                        android:textSize="18dp" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="#E6E6E6"
+                        android:text="d. development role plan"
+                        android:textColor="#fff"
+                        android:textSize="18dp" />
+
+                </RadioGroup>
+
+                <TextView
+                    android:id="@+id/question5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/btnRadio4"
+                    android:layout_marginTop="20dp"
+                    android:text="5. INC stands for"
+                    android:textColor="#fff"
+                    android:textSize="18dp" />
+
+                <RadioGroup
+                    android:id="@+id/btnRadio5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/question5"
+                    android:layout_marginTop="8dp" >
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="#E6E6E6"
+                        android:text="a. integrated"
+                        android:textColor="#fff"
+                        android:textSize="18dp" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="#E6E6E6"
+                        android:text="b. incomplete"
+                        android:textColor="#fff"
+                        android:textSize="18dp" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="#E6E6E6"
+                        android:text="c. including"
+                        android:textColor="#fff"
+                        android:textSize="18dp" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="#E6E6E6"
+                        android:text="d. incorporated"
+                        android:textColor="#fff"
+                        android:textSize="18dp" />
+
+                </RadioGroup>
+
+                <TextView
+                    android:id="@+id/question6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/btnRadio5"
+                    android:layout_marginTop="20dp"
+                    android:text="6. The following are the qualification for Dean’s Honors List except;"
+                    android:textColor="#fff"
+                    android:textSize="18dp" />
+
+                <RadioGroup
+                    android:id="@+id/btnRadio6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/question6"
+                    android:layout_marginTop="8dp" >
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="#E6E6E6"
+                        android:text="a. no grade above 1.8 or 87% in all subjects in the current term."
+                        android:textColor="#fff"
+                        android:textSize="18dp" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="#E6E6E6"
+                        android:text="b. have no Dropped (DRP) subject during the term of evaluation."
+                        android:textColor="#fff"
+                        android:textSize="18dp" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="#E6E6E6"
+                        android:text="c. have no course still to be completed (INC) during the term of evaluation."
+                        android:textColor="#fff"
+                        android:textSize="18dp" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="#E6E6E6"
+                        android:text="d. not have been found guilty of any minor or major offense throughout the student’s residence in the Collegeo"
+                        android:textColor="#fff"
+                        android:textSize="18dp" />
+
+                </RadioGroup>
+
+                <TextView
+                    android:id="@+id/question7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/btnRadio6"
+                    android:layout_marginTop="20dp"
+                    android:text="7. Candidates for graduation must satisy the following requirements except;"
+                    android:textColor="#fff"
+                    android:textSize="18dp" />
+
+                <RadioGroup
+                    android:id="@+id/btnRadio7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/question7"
+                    android:layout_marginTop="8dp" >
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="#E6E6E6"
+                        android:text="a. Completion of all academic and non-academic requirements"
+                        android:textColor="#fff"
+                        android:textSize="18dp" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="#E6E6E6"
+                        android:text="b. compliance of the residency requirements"
+                        android:textColor="#fff"
+                        android:textSize="18dp" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="#E6E6E6"
+                        android:text="c. must have beencleared of all financial obligations with the college"
+                        android:textColor="#fff"
+                        android:textSize="18dp" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="#E6E6E6"
+                        android:text="d. must complete all"
+                        android:textColor="#fff"
+                        android:textSize="18dp" />
+
+                </RadioGroup>
+
+                <TextView
+                    android:id="@+id/question8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/btnRadio7"
+                    android:layout_marginTop="20dp"
+                    android:text="8. Regular and special fees in the College shall be fixed by"
+                    android:textColor="#fff"
+                    android:textSize="18dp" />
+
+                <RadioGroup
+                    android:id="@+id/btnRadio8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/question8"
+                    android:layout_marginTop="8dp" >
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="#E6E6E6"
+                        android:text="a. School president"
+                        android:textColor="#fff"
+                        android:textSize="18dp" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="#E6E6E6"
+                        android:text="b. Board of Trustees"
+                        android:textColor="#fff"
+                        android:textSize="18dp" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="#E6E6E6"
+                        android:text="c. College Registrar"
+                        android:textColor="#fff"
+                        android:textSize="18dp" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="#E6E6E6"
+                        android:text="d. Teasurer's Office"
+                        android:textColor="#fff"
+                        android:textSize="18dp" />
+
+                </RadioGroup>
+
+                <TextView
+                    android:id="@+id/question9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/btnRadio8"
+                    android:layout_marginTop="20dp"
+                    android:text="9. A residence scholar who has no grade beow 1.6 in al subjects will receive a discount of"
+                    android:textColor="#fff"
+                    android:textSize="18dp" />
+
+                <RadioGroup
+                    android:id="@+id/btnRadio9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/question9"
+                    android:layout_marginTop="8dp" >
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="#E6E6E6"
+                        android:text="a. 50% discount on tuition fees"
+                        android:textColor="#fff"
+                        android:textSize="18dp" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="#E6E6E6"
+                        android:text="b. 70% discount on tuition fees"
+                        android:textColor="#fff"
+                        android:textSize="18dp" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="#E6E6E6"
+                        android:text="c. 75% discount on tuition fees"
+                        android:textColor="#fff"
+                        android:textSize="18dp" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="#E6E6E6"
+                        android:text="d. 80% discount on tuition fees"
+                        android:textColor="#fff"
+                        android:textSize="18dp" />
+
+                </RadioGroup>
+
+                <TextView
+                    android:id="@+id/question10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/btnRadio9"
+                    android:layout_marginTop="20dp"
+                    android:text="10. The college offers assisstance to financially challenged students who will be assigned in offices to render service for a maximum of 20 hours per week."
+                    android:textColor="#fff"
+                    android:textSize="18dp" />
+
+                <RadioGroup
+                    android:id="@+id/btnRadio10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/question10"
+                    android:layout_marginTop="8dp" >
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="#E6E6E6"
+                        android:text="a. working student"
+                        android:textColor="#fff"
+                        android:textSize="18dp" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="#E6E6E6"
+                        android:text="b. student labor"
+                        android:textColor="#fff"
+                        android:textSize="18dp" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="#E6E6E6"
+                        android:text="c. office assistant"
+                        android:textColor="#fff"
+                        android:textSize="18dp" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="#E6E6E6"
+                        android:text="d. student helper"
+                        android:textColor="#fff"
+                        android:textSize="18dp" />
+                </RadioGroup>
+
+                <TextView
+                    android:id="@+id/question11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/btnRadio10"
+                    android:layout_marginTop="20dp"
+                    android:text="11. Unauthorized attire in the campus are th following except;"
+                    android:textColor="#fff"
+                    android:textSize="18dp" />
+
+                <RadioGroup
+                    android:id="@+id/btnRadio11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/question11"
+                    android:layout_marginTop="8dp" >
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="#E6E6E6"
+                        android:text="a. practice teachers uniform"
+                        android:textColor="#fff"
+                        android:textSize="18dp" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="#E6E6E6"
+                        android:text="b. sleeveless shirts, shorts and indecent pants"
+                        android:textColor="#fff"
+                        android:textSize="18dp" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="#E6E6E6"
+                        android:text="c. shorts or mini skirt, slippers"
+                        android:textColor="#fff"
+                        android:textSize="18dp" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="#E6E6E6"
+                        android:text="d. T-shirts which are body hugging and with patches or indecent letterings or pictures"
+                        android:textColor="#fff"
+                        android:textSize="18dp" />
+                </RadioGroup>
+
+                <TextView
+                    android:id="@+id/question12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/btnRadio11"
+                    android:layout_marginTop="20dp"
+                    android:text="12. A student is considered dropped from the subject after how many unexcused absences?"
+                    android:textColor="#fff"
+                    android:textSize="18dp" />
+
+                <RadioGroup
+                    android:id="@+id/btnRadio12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/question12"
+                    android:layout_marginTop="8dp" >
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="#E6E6E6"
+                        android:text="a. 3"
+                        android:textColor="#fff"
+                        android:textSize="18dp" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="#E6E6E6"
+                        android:text="b. 4"
+                        android:textColor="#fff"
+                        android:textSize="18dp" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="#E6E6E6"
+                        android:text="c. 5"
+                        android:textColor="#fff"
+                        android:textSize="18dp" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="#E6E6E6"
+                        android:text="d. 6"
+                        android:textColor="#fff"
+                        android:textSize="18dp" />
+                </RadioGroup>
+
+                <TextView
+                    android:id="@+id/question13"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/btnRadio12"
+                    android:layout_marginTop="20dp"
+                    android:text="13. The following are the rights of the students aside from;"
+                    android:textColor="#fff"
+                    android:textSize="18dp" />
+
+                <RadioGroup
+                    android:id="@+id/btnRadio13"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/question13"
+                    android:layout_marginTop="8dp" >
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="#E6E6E6"
+                        android:text="a. The right to have a legal counsel of their own choice"
+                        android:textColor="#fff"
+                        android:textSize="18dp" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="#E6E6E6"
+                        android:text="b. The right to be heard by competent authorities"
+                        android:textColor="#fff"
+                        android:textSize="18dp" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="#E6E6E6"
+                        android:text="c. The right to be heard after being condemned"
+                        android:textColor="#fff"
+                        android:textSize="18dp" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="#E6E6E6"
+                        android:text="d. The right to have an impartial tribunal or investigating body."
+                        android:textColor="#fff"
+                        android:textSize="18dp" />
+                </RadioGroup>
+
+                <TextView
+                    android:id="@+id/question14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/btnRadio13"
+                    android:layout_marginTop="20dp"
+                    android:text="14. Which reading materials are to be read in the library only and can't be lent out for photocopying use?"
+                    android:textColor="#fff"
+                    android:textSize="18dp" />
+
+                <RadioGroup
+                    android:id="@+id/btnRadio14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/question14"
+                    android:layout_marginTop="8dp" >
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="#E6E6E6"
+                        android:text="a. newspaper"
+                        android:textColor="#fff"
+                        android:textSize="18dp" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="#E6E6E6"
+                        android:text="b. unpublished materials"
+                        android:textColor="#fff"
+                        android:textSize="18dp" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="#E6E6E6"
+                        android:text="c. encyclopedias"
+                        android:textColor="#fff"
+                        android:textSize="18dp" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="#E6E6E6"
+                        android:text="d. dictionaries"
+                        android:textColor="#fff"
+                        android:textSize="18dp" />
+                </RadioGroup>
+
+                <TextView
+                    android:id="@+id/question15"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/btnRadio14"
+                    android:layout_marginTop="20dp"
+                    android:text="15. The following are examples of unpublished materials except;"
+                    android:textColor="#fff"
+                    android:textSize="18dp" />
+
+                <RadioGroup
+                    android:id="@+id/btnRadio15"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/question15"
+                    android:layout_marginTop="8dp" >
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="#E6E6E6"
+                        android:text="a. journals"
+                        android:textColor="#fff"
+                        android:textSize="18dp" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="#E6E6E6"
+                        android:text="b. theses"
+                        android:textColor="#fff"
+                        android:textSize="18dp" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="#E6E6E6"
+                        android:text="c. dissertations"
+                        android:textColor="#fff"
+                        android:textSize="18dp" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="#E6E6E6"
+                        android:text="d. research papers"
+                        android:textColor="#fff"
+                        android:textSize="18dp" />
+                </RadioGroup>
+
+            </RelativeLayout>
+
+
+
+        </ScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>
