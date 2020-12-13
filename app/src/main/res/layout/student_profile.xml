@@ -38,7 +38,7 @@
             android:paddingTop="30dp"
             android:fontFamily="@font/fredokaone_regular"
             android:gravity="center"
-            android:text="Student Profile"
+            android:text="Update Profile"
             android:textColor="#333333"
             android:textSize="45sp" />
 
@@ -61,21 +61,39 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
-                <TextView
-                    android:id="@+id/searchBar"
+                <LinearLayout
+                    android:id="@+id/linear_con"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:text="Student E. Name"
-                    android:textColor="#fff"
-                    android:textStyle="bold"
+                    android:layout_alignParentStart="true"
+                    android:orientation="vertical"
+                    app:layout_constraintTop_toTopOf="parent">
 
-                    android:textSize="30sp"
-                    tools:layout_editor_absoluteY="259dp" />
+                    <TextView
+                        android:id="@+id/txtfirstname"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="FIrst name"
+                        android:textColor="#fff"
+                        android:textSize="22sp"
+                         />
+                    <TextView
+                        android:id="@+id/txtLastname"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="Last Name"
+                        android:textColor="#fff"
+                        android:textSize="22sp"
+                         />
+
+                </LinearLayout>
+
 
                 <TextView
-                    android:id="@+id/rSchoolID"
-                    android:layout_below="@+id/searchBar"
+                    android:id="@+id/txtUsername"
+                    android:layout_below="@+id/linear_con"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
@@ -85,42 +103,23 @@
                     tools:layout_editor_absoluteY="259dp" />
 
                 <TextView
-                    android:id="@+id/rYearSec"
-                    android:layout_below="@+id/rSchoolID"
+                    android:id="@+id/txtpassword"
+                    android:layout_below="@+id/txtUsername"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="35252"
+                    android:text="Password"
                     android:textColor="#fff"
                     android:textSize="20sp"
                     tools:layout_editor_absoluteY="259dp" />
 
-                <TextView
-                    android:id="@+id/rCourse"
-                    android:layout_below="@+id/rYearSec"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:text="Course"
-                    android:textColor="#fff"
-                    android:textSize="20sp"
-                    tools:layout_editor_absoluteY="259dp" />
-                <TextView
-                    android:id="@+id/rGender"
-                    android:layout_below="@+id/rCourse"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:text="Information Technology"
-                    android:textColor="#fff"
-                    android:textSize="20sp"
-                    tools:layout_editor_absoluteY="259dp" />
+
 
                 <Button
                     android:id="@+id/adProfUpdate"
                     android:layout_width="340dp"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/rGender"
+                    android:layout_below="@+id/txtpassword"
                     android:layout_alignParentStart="true"
                     android:layout_alignParentEnd="true"
                     android:layout_marginStart="157dp"
@@ -129,6 +128,8 @@
                     android:background="@drawable/rounded_button"
                     android:text="Update"
                     android:textColor="#fff" />
+
+
 
             </RelativeLayout>
         </ScrollView>
