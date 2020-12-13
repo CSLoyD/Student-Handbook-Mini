@@ -77,7 +77,25 @@
                         android:text="FIrst name"
                         android:textColor="#fff"
                         android:textSize="22sp"
+
                          />
+                    <EditText
+                        android:id="@+id/rFirstName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/txtIntroText2"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginStart="40dp"
+                        android:layout_marginEnd="40dp"
+                        android:autofillHints=""
+                        android:backgroundTint="#ffff"
+                        android:ems="10"
+                        android:hint="@string/rFirstName"
+                        android:inputType="textPersonName"
+                        android:textColor="#ffff"
+                        android:textColorHint="#ffff"
+                        android:textSize="17sp" />
                     <TextView
                         android:id="@+id/txtLastname"
                         android:layout_width="match_parent"
@@ -87,6 +105,23 @@
                         android:textColor="#fff"
                         android:textSize="22sp"
                          />
+                    <EditText
+                        android:id="@+id/rLastName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/rFirstName"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginStart="40dp"
+                        android:layout_marginEnd="40dp"
+                        android:autofillHints=""
+                        android:backgroundTint="#ffff"
+                        android:ems="10"
+                        android:hint="@string/rLastName"
+                        android:inputType="textPersonName"
+                        android:textColor="#ffff"
+                        android:textColorHint="#ffff"
+                        android:textSize="17sp" />
 
                 </LinearLayout>
 
@@ -97,14 +132,32 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="School ID"
+                    android:text="User Name"
                     android:textColor="#fff"
                     android:textSize="20sp"
                     tools:layout_editor_absoluteY="259dp" />
+                <EditText
+                    android:inputType="textPersonName"
+                    android:id="@+id/rUserName"
+                    android:layout_below="@+id/txtUsername"
+                    android:hint="@string/rUserName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginEnd="40dp"
+                    android:autofillHints=""
+                    android:backgroundTint="#ffff"
+                    android:ems="10"
+                    android:textColor="#ffff"
+                    android:textColorHint="#ffff"
+                    android:textSize="17sp" />
+
 
                 <TextView
                     android:id="@+id/txtpassword"
-                    android:layout_below="@+id/txtUsername"
+                    android:layout_below="@+id/rUserName"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
@@ -112,6 +165,24 @@
                     android:textColor="#fff"
                     android:textSize="20sp"
                     tools:layout_editor_absoluteY="259dp" />
+                <EditText
+                    android:id="@+id/rUserPass"
+                    android:layout_below="@+id/rUserName"
+                    android:inputType="textPassword"
+                    android:hint="@string/rUserPass"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginEnd="40dp"
+                    android:layout_marginTop="10dp"
+                    android:autofillHints=""
+                    android:backgroundTint="#ffff"
+                    android:ems="10"
+                    android:textColor="#ffff"
+                    android:textColorHint="#ffff"
+                    android:textSize="17sp" />
 
 
 
