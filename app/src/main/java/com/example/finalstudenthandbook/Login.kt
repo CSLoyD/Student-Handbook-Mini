@@ -9,7 +9,6 @@ import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.vishnusivadas.advanced_httpurlconnection.FetchData
 import com.vishnusivadas.advanced_httpurlconnection.PutData
 import kotlinx.android.synthetic.main.activity_login.*
 
@@ -83,12 +82,69 @@ class Login : AppCompatActivity() {
                                         if (putData.onComplete()) {
                                             val userType = putData.result
 
-                                            LoggingIn.saveUsername("lUsername", lUsername)
+                                            LoggingIn.saveUsername("lUsername", loginUsername.text.toString())
                                             LoggingIn.saveUserType("userType", userType)
                                             LoggingIn.saveLogin("isLogin", true)
 
-                                            Toast.makeText(applicationContext, suc, Toast.LENGTH_SHORT).show()
-                                            val mainIntent = Intent(this, StudentDashboard::class.java)
+                                            //Start ProgressBar first (Set visibility VISIBLE)
+                                            val handler2 = Handler(Looper.getMainLooper())
+                                            handler2.post {
+                                                //Starting Write and Read data with URL
+                                                //Creating array for parameters
+                                                val fieldF = arrayOfNulls<String>(1)
+                                                fieldF[0] = "UserF"
+                                                //Creating array for data
+                                                val dataF = arrayOfNulls<String>(1)
+                                                dataF[0] = loginUsername.text.toString()
+                                                val putData = PutData(
+                                                    dbConnection().urldb + "StudentHandbook/fetchfname.php",
+                                                    "POST",
+                                                    fieldF,
+                                                    dataF
+                                                )
+                                                if (putData.startPut()) {
+                                                    if (putData.onComplete()) {
+                                                        val FirstName = putData.result
+                                                        LoggingIn.saveFirstName("FirstName", FirstName)
+                                                    }
+                                                }
+                                                //End Write and Read data with URL
+                                            }
+
+                                            //Start ProgressBar first (Set visibility VISIBLE)
+                                            val handler3 = Handler(Looper.getMainLooper())
+                                            handler3.post {
+                                                //Starting Write and Read data with URL
+                                                //Creating array for parameters
+                                                val fieldL = arrayOfNulls<String>(1)
+                                                fieldL[0] = "UserL"
+                                                //Creating array for data
+                                                val dataL = arrayOfNulls<String>(1)
+                                                dataL[0] = loginUsername.text.toString()
+                                                val putData = PutData(
+                                                    dbConnection().urldb + "StudentHandbook/fetchlname.php",
+                                                    "POST",
+                                                    fieldL,
+                                                    dataL
+                                                )
+                                                if (putData.startPut()) {
+                                                    if (putData.onComplete()) {
+                                                        val LastName = putData.result
+                                                        LoggingIn.saveLastName("LastName", LastName)
+                                                    }
+                                                }
+                                                //End Write and Read data with URL
+                                            }
+
+                                            Toast.makeText(
+                                                applicationContext,
+                                                suc,
+                                                Toast.LENGTH_SHORT
+                                            ).show()
+                                            val mainIntent = Intent(
+                                                this,
+                                                StudentDashboard::class.java
+                                            )
                                             startActivity(mainIntent)
                                             finish()
                                         }
@@ -96,14 +152,19 @@ class Login : AppCompatActivity() {
                                 }
 
                             } else {
-                                Toast.makeText(applicationContext, result, Toast.LENGTH_SHORT).show()
+                                Toast.makeText(applicationContext, result, Toast.LENGTH_SHORT)
+                                    .show()
                             }
 
                         }
                     }
                 })
             } else {
-                Toast.makeText(applicationContext, "Please fill out all fields!", Toast.LENGTH_SHORT).show()
+                Toast.makeText(
+                    applicationContext,
+                    "Please fill out all fields!",
+                    Toast.LENGTH_SHORT
+                ).show()
             }
         }
 
