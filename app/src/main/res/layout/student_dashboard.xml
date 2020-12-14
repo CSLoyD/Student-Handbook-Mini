@@ -95,7 +95,7 @@
                 android:orientation="vertical">
 
                 <ProgressBar
-                    android:id="@+id/rProgress"
+                    android:id="@+id/sdProgress"
                     style="?android:attr/progressBarStyle"
                     android:layout_below="@+id/btnlayout"
                     android:layout_width="match_parent"

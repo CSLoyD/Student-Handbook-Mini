@@ -40,7 +40,8 @@ class UpdateProfile : AppCompatActivity() {
 
             val LoggingIn: LoggingIn = LoggingIn(this)
             val uid = LoggingIn.getUID("UID")
-            //Start ProgressBar first (Set visibility VISIBLE)
+
+            profileProgress.visibility = View.VISIBLE
             val handler = Handler(Looper.getMainLooper())
             handler.post {
                 //Starting Write and Read data with URL
@@ -66,6 +67,7 @@ class UpdateProfile : AppCompatActivity() {
                 )
                 if (putData.startPut()) {
                     if (putData.onComplete()) {
+                        profileProgress.visibility = View.GONE
                         val result = putData.result
                         val suc = "Profile Updated!"
                         if (result.equals(suc, true)) {

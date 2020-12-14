@@ -9,6 +9,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.github.barteksc.pdfviewer.PDFView
 import com.vishnusivadas.advanced_httpurlconnection.PutData
 import kotlinx.android.synthetic.main.activity_login.*
+import kotlinx.android.synthetic.main.student_dashboard.*
 
 class StudentDashboard : AppCompatActivity() {
 
@@ -33,6 +34,8 @@ class StudentDashboard : AppCompatActivity() {
     fun std_updateprof(view: View) {
         val LoggingIn:LoggingIn= LoggingIn(this)
         val uid = LoggingIn.getUID("UID")
+
+        sdProgress.visibility = View.VISIBLE
         val handler2 = Handler(Looper.getMainLooper())
         handler2.post {
             //Starting Write and Read data with URL
