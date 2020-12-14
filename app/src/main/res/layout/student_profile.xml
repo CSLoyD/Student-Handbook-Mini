@@ -108,6 +108,18 @@
                         android:textColor="#fff"
                         android:textSize="22sp"
                          />
+
+                    <ProgressBar
+                        android:id="@+id/rProgress"
+                        style="?android:attr/progressBarStyle"
+                        android:layout_below="@+id/txtLastname"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentEnd="true"
+                        android:hint="@string/rProgress"
+                        android:visibility="gone"/>
+
                     <EditText
                         android:id="@+id/rLastName"
                         android:layout_width="match_parent"
