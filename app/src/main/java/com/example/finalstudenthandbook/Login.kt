@@ -86,51 +86,26 @@ class Login : AppCompatActivity() {
                                             LoggingIn.saveUserType("userType", userType)
                                             LoggingIn.saveLogin("isLogin", true)
 
-                                            //Start ProgressBar first (Set visibility VISIBLE)
                                             val handler2 = Handler(Looper.getMainLooper())
                                             handler2.post {
                                                 //Starting Write and Read data with URL
                                                 //Creating array for parameters
                                                 val fieldF = arrayOfNulls<String>(1)
-                                                fieldF[0] = "UserF"
+                                                fieldF[0] = "Username"
                                                 //Creating array for data
                                                 val dataF = arrayOfNulls<String>(1)
                                                 dataF[0] = loginUsername.text.toString()
                                                 val putData = PutData(
-                                                    dbConnection().urldb + "StudentHandbook/fetchfname.php",
+                                                    dbConnection().urldb + "StudentHandbook/fetchUserID.php",
                                                     "POST",
                                                     fieldF,
                                                     dataF
                                                 )
                                                 if (putData.startPut()) {
                                                     if (putData.onComplete()) {
-                                                        val FirstName = putData.result
-                                                        LoggingIn.saveFirstName("FirstName", FirstName)
-                                                    }
-                                                }
-                                                //End Write and Read data with URL
-                                            }
-
-                                            //Start ProgressBar first (Set visibility VISIBLE)
-                                            val handler3 = Handler(Looper.getMainLooper())
-                                            handler3.post {
-                                                //Starting Write and Read data with URL
-                                                //Creating array for parameters
-                                                val fieldL = arrayOfNulls<String>(1)
-                                                fieldL[0] = "UserL"
-                                                //Creating array for data
-                                                val dataL = arrayOfNulls<String>(1)
-                                                dataL[0] = loginUsername.text.toString()
-                                                val putData = PutData(
-                                                    dbConnection().urldb + "StudentHandbook/fetchlname.php",
-                                                    "POST",
-                                                    fieldL,
-                                                    dataL
-                                                )
-                                                if (putData.startPut()) {
-                                                    if (putData.onComplete()) {
-                                                        val LastName = putData.result
-                                                        LoggingIn.saveLastName("LastName", LastName)
+                                                        val UID = putData.result
+                                                        val LoggingIn:LoggingIn= LoggingIn(this)
+                                                        LoggingIn.saveUID("UID", UID)
                                                     }
                                                 }
                                                 //End Write and Read data with URL

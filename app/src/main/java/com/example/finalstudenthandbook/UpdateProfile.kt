@@ -23,6 +23,7 @@ class UpdateProfile : AppCompatActivity() {
         val fname = LoggingIn.getFirstName("FirstName")
         val lname = LoggingIn.getLastName("LastName")
         val username = LoggingIn.getUsername("lUsername")
+        val uid = LoggingIn.getUID("UID")
 
         if (fname != null) {
             rFirstName.text = fname.toEditable()
@@ -34,23 +35,29 @@ class UpdateProfile : AppCompatActivity() {
             rUserName.text = username.toEditable()
         }
 
+
         adProfUpdate.setOnClickListener {
+
+            val LoggingIn: LoggingIn = LoggingIn(this)
+            val uid = LoggingIn.getUID("UID")
             //Start ProgressBar first (Set visibility VISIBLE)
             val handler = Handler(Looper.getMainLooper())
             handler.post {
                 //Starting Write and Read data with URL
                 //Creating array for parameters
-                val field = arrayOfNulls<String>(4)
-                field[0] = "rUserName"
-                field[1] = "rUserPass"
-                field[2] = "rFirstName"
-                field[3] = "rLastName"
+                val field = arrayOfNulls<String>(5)
+                field[0] = "rUserID"
+                field[1] = "rUserName"
+                field[2] = "rUserPass"
+                field[3] = "rFirstName"
+                field[4] = "rLastName"
                 //Creating array for data
-                val data = arrayOfNulls<String>(4)
-                data[0] = rFirstName.text.toString()
-                data[1] = rLastName.text.toString()
-                data[2] = rUserName.text.toString()
-                data[3] = rUserPass.text.toString()
+                val data = arrayOfNulls<String>(5)
+                data[0] = uid.toString()
+                data[1] = rUserName.text.toString()
+                data[2] = rUserPass.text.toString()
+                data[3] = rFirstName.text.toString()
+                data[4] = rLastName.text.toString()
                 val putData = PutData(
                     dbConnection().urldb + "StudentHandbook/updateProfile.php",
                     "POST",

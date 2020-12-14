@@ -34,6 +34,15 @@ class LoggingIn(context: Context) {
         editor!!.commit()
     }
 
+    fun saveUID(KEY_NAME: String, text: String) {
+
+        val editor: SharedPreferences.Editor = sharedPref.edit()
+
+        editor.putString(KEY_NAME, text)
+
+        editor!!.commit()
+    }
+
     fun saveLogin(KEY_NAME: String, status: Boolean) {
 
         val editor: SharedPreferences.Editor = sharedPref.edit()
@@ -63,6 +72,11 @@ class LoggingIn(context: Context) {
     }
 
     fun getFirstName(KEY_NAME: String): String? {
+
+        return sharedPref.getString(KEY_NAME, null)
+    }
+
+    fun getUID(KEY_NAME: String): String? {
 
         return sharedPref.getString(KEY_NAME, null)
     }
